@@ -1,0 +1,60 @@
+Online Shopping System - Software Requirements Specification (SRS)
+
+1. Introduction
+The Online Shopping System (OSS) is a web-based application designed to allow users to browse, search, and purchase products online. This document outlines the functional and non-functional requirements for the system.
+
+2. Functional Requirements
+
+2.1 User Registration
+- The system shall allow users to create an account with a valid email and password.
+- Passwords must be at least 8 characters long, including one uppercase letter and one number.
+- Users must verify their email address via a confirmation link within 24 hours.
+
+2.2 User Login
+- The system shall authenticate users with their email and password.
+- After 3 failed login attempts, the account shall be locked for 10 minutes.
+- Users can reset their password via an email link.
+
+2.3 Product Search
+- The system shall provide a search bar to find products by name or category.
+- Search results shall display within 2 seconds for up to 1000 products.
+- Users can filter results by price, rating, and availability.
+
+2.4 Shopping Cart
+- Users shall add products to a cart with a maximum of 50 items.
+- The system shall display the total price, including tax and shipping.
+- Users can remove items or update quantities in the cart.
+
+2.5 Checkout Process
+- The system shall support payment via credit card and PayPal.
+- Users must enter a valid shipping address before completing the purchase.
+- Orders shall be confirmed with an email receipt within 5 minutes.
+
+3. Non-Functional Requirements
+
+3.1 Performance
+- The system shall handle 500 concurrent users with a response time under 3 seconds.
+- Search functionality shall scale to 10,000 products without performance degradation.
+
+3.2 Security
+- User passwords shall be encrypted using SHA-256.
+- The system shall protect against SQL injection and XSS attacks.
+- Session tokens shall expire after 30 minutes of inactivity.
+
+3.3 Usability
+- The interface shall be intuitive, with buttons and links clearly labeled.
+- The system shall support English and Spanish languages.
+
+3.4 Compatibility
+- The system shall run on Chrome, Firefox, and Safari browsers.
+- It shall be compatible with Windows, macOS, iOS, and Android devices.
+
+4. Constraints
+- The system shall use a MySQL database for product and user data.
+- Maximum file size for product images is 2MB.
+
+5. Assumptions
+- Users have a stable internet connection with at least 5 Mbps speed.
+- Payment gateways (credit card, PayPal) are operational 24/7.
+
+End of Document
